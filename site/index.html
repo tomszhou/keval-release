@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Keval 金匣子 GitHub Release 下载统计" />
+    <title>Keval 下载统计</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="https://github.com/tomszhou/keval-release">
+          <span class="brand-mark" aria-hidden="true">K</span>
+          <span>
+            <strong>Keval 金匣子</strong>
+            <small>下载统计</small>
+          </span>
+        </a>
+        <a class="download-button" href="https://github.com/tomszhou/keval-release/releases/latest">
+          下载最新版
+          <span aria-hidden="true">↗</span>
+        </a>
+      </header>
+
+      <main>
+        <section class="hero">
+          <p class="eyebrow">GitHub Release Analytics</p>
+          <h1>每一次下载，<br /><span>都清晰可见。</span></h1>
+          <p class="hero-copy">数据自动采集自 GitHub Releases，按北京时间统计并定时更新。</p>
+        </section>
+
+        <section class="metric-grid" aria-label="下载概览">
+          <article class="metric-card primary">
+            <div class="metric-label"><span class="live-dot"></span>今日下载</div>
+            <div class="metric-value" id="today-downloads">—</div>
+            <div class="metric-note" id="today-date">正在读取数据</div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-label">昨日下载</div>
+            <div class="metric-value" id="yesterday-downloads">—</div>
+            <div class="metric-note">完整自然日</div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-label">累计下载</div>
+            <div class="metric-value" id="total-downloads">—</div>
+            <div class="metric-note">全部版本安装包</div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-label">发布版本</div>
+            <div class="metric-value" id="release-count">—</div>
+            <div class="metric-note">有可下载附件的版本</div>
+          </article>
+        </section>
+
+        <section class="panel trend-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">趋势</p>
+              <h2>最近 30 天下载量</h2>
+            </div>
+            <div class="last-updated" id="last-updated">—</div>
+          </div>
+          <div class="chart-wrap" id="chart" role="img" aria-label="最近 30 天每日下载量折线图"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">版本</p>
+              <h2>各安装包累计下载</h2>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>版本</th>
+                  <th>安装包</th>
+                  <th>发布日期</th>
+                  <th class="number">下载量</th>
+                </tr>
+              </thead>
+              <tbody id="asset-rows"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <p class="baseline-note" id="baseline-note"></p>
+      </main>
+
+      <footer>
+        <span>Keval 金匣子</span>
+        <span>数据来源：GitHub REST API</span>
+      </footer>
+    </div>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>

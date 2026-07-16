@@ -1,0 +1,238 @@
+:root {
+  color-scheme: light;
+  --ink: #17201b;
+  --muted: #6f7973;
+  --line: #dde3df;
+  --paper: #f5f7f5;
+  --card: #ffffff;
+  --green: #2b6b49;
+  --green-soft: #dceadf;
+  --lime: #d7ee89;
+  --shadow: 0 18px 50px rgba(35, 58, 44, 0.07);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 85% 2%, rgba(215, 238, 137, 0.3), transparent 25rem),
+    var(--paper);
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+.page-shell {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.topbar {
+  min-height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(23, 32, 27, 0.12);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  color: #fff;
+  background: var(--green);
+  font: 700 20px/1 Georgia, serif;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
+.brand strong, .brand small { display: block; }
+.brand strong { font-size: 15px; letter-spacing: 0.01em; }
+.brand small { margin-top: 2px; color: var(--muted); font-size: 12px; }
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 16px;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--green);
+  font-size: 14px;
+  font-weight: 650;
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.download-button:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(43, 107, 73, 0.2); }
+
+.hero { padding: 76px 0 55px; }
+
+.eyebrow, .panel-kicker {
+  margin: 0 0 14px;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 800px;
+  margin: 0;
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-size: clamp(48px, 8vw, 92px);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+h1 span { color: var(--green); }
+
+.hero-copy {
+  max-width: 560px;
+  margin: 28px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.metric-card {
+  min-height: 186px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--shadow);
+}
+
+.metric-card.primary {
+  border-color: var(--green);
+  color: #fff;
+  background: var(--green);
+}
+
+.metric-label { color: var(--muted); font-size: 13px; font-weight: 650; }
+.primary .metric-label { color: rgba(255, 255, 255, 0.72); }
+
+.live-dot {
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: var(--lime);
+  box-shadow: 0 0 0 5px rgba(215, 238, 137, 0.12);
+}
+
+.metric-value {
+  margin-top: 18px;
+  font-family: Georgia, serif;
+  font-size: 58px;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.metric-note { color: #89918c; font-size: 12px; }
+.primary .metric-note { color: rgba(255, 255, 255, 0.62); }
+
+.panel {
+  margin-top: 24px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.trend-panel { margin-top: 54px; }
+
+.panel-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.panel-kicker { margin-bottom: 8px; }
+h2 { margin: 0; font-family: Georgia, "Noto Serif SC", serif; font-size: 27px; font-weight: 500; }
+.last-updated { color: var(--muted); font-size: 12px; }
+
+.chart-wrap {
+  min-height: 285px;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.chart-wrap svg { width: 100%; height: 285px; overflow: visible; }
+.grid-line { stroke: #e7ebe8; stroke-width: 1; }
+.chart-area { fill: url(#areaGradient); }
+.chart-line { fill: none; stroke: var(--green); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.chart-dot { fill: var(--card); stroke: var(--green); stroke-width: 2; }
+.chart-label { fill: #879089; font: 11px Inter, sans-serif; }
+.empty-chart { height: 260px; display: grid; place-items: center; color: var(--muted); font-size: 14px; }
+
+.table-wrap { margin-top: 22px; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 17px 12px; border-bottom: 1px solid #edf0ee; text-align: left; font-size: 13px; }
+th { color: var(--muted); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
+td.number, th.number { text-align: right; font-variant-numeric: tabular-nums; }
+.version-pill { padding: 5px 9px; border-radius: 999px; color: var(--green); background: var(--green-soft); font-weight: 750; }
+.asset-link { color: var(--ink); text-decoration-color: #bcc5bf; text-underline-offset: 3px; }
+
+.baseline-note {
+  margin: 18px 5px 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+footer {
+  padding: 44px 0 36px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+@media (max-width: 860px) {
+  .metric-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero { padding-top: 58px; }
+}
+
+@media (max-width: 560px) {
+  .page-shell { width: min(100% - 24px, 1180px); }
+  .topbar { min-height: 76px; }
+  .brand small { display: none; }
+  .download-button { padding: 9px 13px; font-size: 12px; }
+  .hero { padding: 48px 4px 38px; }
+  .hero-copy { font-size: 14px; }
+  .metric-grid { grid-template-columns: 1fr; }
+  .metric-card { min-height: 158px; }
+  .metric-value { font-size: 50px; }
+  .panel { padding: 22px 18px; border-radius: 19px; }
+  .trend-panel { margin-top: 34px; }
+  .panel-heading { align-items: flex-start; flex-direction: column; gap: 10px; }
+  h2 { font-size: 23px; }
+  footer { flex-direction: column; gap: 8px; }
+}

@@ -1,0 +1,58 @@
+{
+  "repository": "tomszhou/keval-release",
+  "timeZone": "Asia/Shanghai",
+  "trackingStartedAt": "2026-07-16T07:33:36.279Z",
+  "generatedAt": "2026-07-16T07:33:36.281Z",
+  "totalDownloads": 7,
+  "assets": [
+    {
+      "id": "478869996",
+      "tag": "v1.0.3",
+      "name": "Keval-1.0.3-macOS-AppleSilicon.dmg",
+      "downloads": 1,
+      "size": 13856566,
+      "publishedAt": "2026-07-16T06:48:17Z",
+      "url": "https://github.com/tomszhou/keval-release/releases/download/v1.0.3/Keval-1.0.3-macOS-AppleSilicon.dmg"
+    },
+    {
+      "id": "478786640",
+      "tag": "v1.0.2",
+      "name": "Keval-1.0.2-macOS-AppleSilicon.dmg",
+      "downloads": 3,
+      "size": 13843315,
+      "publishedAt": "2026-07-16T05:01:53Z",
+      "url": "https://github.com/tomszhou/keval-release/releases/download/v1.0.2/Keval-1.0.2-macOS-AppleSilicon.dmg"
+    },
+    {
+      "id": "478620335",
+      "tag": "v1.0.1",
+      "name": "Keval-1.0.1-macOS-AppleSilicon.dmg",
+      "downloads": 2,
+      "size": 13827775,
+      "publishedAt": "2026-07-16T01:42:21Z",
+      "url": "https://github.com/tomszhou/keval-release/releases/download/v1.0.1/Keval-1.0.1-macOS-AppleSilicon.dmg"
+    },
+    {
+      "id": "477709587",
+      "tag": "v1.0.0",
+      "name": "Keval-1.0.0-macOS-AppleSilicon.dmg",
+      "downloads": 1,
+      "size": 13534428,
+      "publishedAt": "2026-07-15T08:36:15Z",
+      "url": "https://github.com/tomszhou/keval-release/releases/download/v1.0.0/Keval-1.0.0-macOS-AppleSilicon.dmg"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-07-16",
+      "downloads": 0,
+      "totalDownloads": 7
+    }
+  ],
+  "assetCounters": {
+    "477709587": 1,
+    "478620335": 2,
+    "478786640": 3,
+    "478869996": 1
+  }
+}
