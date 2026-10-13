@@ -2,7 +2,7 @@
   "repository": "tomszhou/keval-release",
   "timeZone": "Asia/Shanghai",
   "trackingStartedAt": "2026-07-16T07:33:36.279Z",
-  "generatedAt": "2026-10-12T22:58:44.548Z",
+  "generatedAt": "2026-10-13T19:16:28.677Z",
   "totalDownloads": 13,
   "assets": [
     {
@@ -508,6 +508,11 @@
     },
     {
       "date": "2026-10-13",
+      "downloads": 0,
+      "totalDownloads": 13
+    },
+    {
+      "date": "2026-10-14",
       "downloads": 0,
       "totalDownloads": 13
     }
